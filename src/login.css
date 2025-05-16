@@ -1,0 +1,73 @@
+.signing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  padding: 20px;
+  background-color: #a0bad4; /* Very light gray background */
+}
+
+.signing-container h2 {
+  margin-bottom: 30px;
+  font-size: 2.5em; /* Slightly larger heading */
+  color: #4886de;
+  font-weight: bold; /* Make the heading bold */
+}
+
+.signing-container form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px; /* Slightly wider form */
+  padding: 30px;
+  background-color: #e4dade;
+  border-radius: 10px; /* More rounded corners */
+  box-shadow: 0 4px 8px rgb(138, 135, 203) /* More pronounced shadow */
+}
+
+.signing-container input {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 6px; /* Slightly more rounded input fields */
+  font-size: 16px;
+}
+
+.signing-container input:focus {
+  outline: none;
+  border-color: #898386;
+  box-shadow: 0 0 8px rgba(195, 186, 190, 0.3); /* More visible focus shadow */
+}
+
+.signing-container button {
+  padding: 14px 25px;
+  background-color: #afa8ac;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px; /* Slightly larger button text */
+  font-weight: bold; /* Make the button text bold */
+  transition: background-color 0.2s ease-in-out; /* Smoother transition */
+}
+
+.signing-container button:hover {
+  background-color: #0056b3;
+}
+
+.signing-container p {
+  margin-top: 25px;
+  color: #666;
+  font-size: 15px;
+}
+
+.signing-container p a {
+  color: #e91e63; /* Pink color for the signup link */
+  text-decoration: none;
+  font-weight: bold; /* Make the link text bold */
+}
+
+.signing-container p a:hover {
+  text-decoration: underline;
+}

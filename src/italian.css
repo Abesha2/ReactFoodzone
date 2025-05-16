@@ -1,0 +1,315 @@
+/* You can customize these colors, but I've kept them similar to the veg.css */
+body {
+  margin: 0;
+  overflow: scroll;
+  background-color: rgb(5, 6, 8) !important;
+}
+
+.italian-page-container-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background-color: #4a148c; /* Changed to a deep purple */
+}
+
+.gradient-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #1a237e, #2196f3, #3f51b5, #00bcd4); /* Updated gradient */
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.italian-page-container {
+  padding: 60px;
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 25px;
+  align-items: flex-start;
+  background: #e3f2fd; /* Light blue background */
+  color: #333;
+  animation: fadeIn 0.6s ease-out;
+  min-height: calc(100vh - 120px);
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.italian-filter-section {
+  width: 400px;
+  padding: 20px;
+  background: #f0f4c3;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 20px;
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
+}
+
+.filter-heading {
+  font-size: 1.4em;
+  margin-bottom: 15px;
+  color: #1a237e; /* Dark blue heading */
+  text-align: left;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #b0bec5;
+  padding-bottom: 8px;
+}
+
+.checkbox-container-ita {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  align-items: flex-start;
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.checkbox-container-ita label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9em;
+  color: #546e7a; /* Blue-gray text */
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-container-ita input[type="checkbox"] {
+  margin-right: 8px;
+  cursor: pointer;
+  accent-color: #2196f3; /* Blue checkbox */
+}
+
+.checkbox-container-ita button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #2196f3, #64b5f6); /* Blue gradient button */
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 0.9em;
+  width: 100%;
+  transition: background 0.4s ease, transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.checkbox-container-ita button:hover {
+  background: linear-gradient(90deg, #64b5f6, #2196f3);
+  transform: scale(1.05);
+}
+
+.italian-products-section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.italian-main-title {
+  padding-top: 20px;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2em;
+  color: #1a237e; /* Dark blue title */
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(33, 150, 243, 0.4); /* Blue shadow */
+  animation: slideInTitle 0.6s ease-out;
+}
+
+.product-grid-ita {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.product-card-ita {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  padding: 1.2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card-ita:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(33, 150, 243, 0.3); /* Blue shadow */
+  border: 2px solid #2196f3;
+}
+
+.product-card-ita img {
+  width: 100%;
+  height: 160px !important;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  transition: transform 0.4s ease;
+}
+
+.product-card-ita img:hover {
+  transform: scale(1.1);
+}
+
+.product-card-ita h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.25em;
+  font-weight: 600;
+  color: #1a237e; /* Dark blue */
+}
+
+.product-card-ita p {
+  margin-bottom: 1.5rem;
+  color: #546e7a; /* Blue-gray */
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.product-card-ita .product-price {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #ef5350;
+  margin-bottom: 15px;
+}
+
+.add-to-cart-btn-ita {
+  background: linear-gradient(90deg, #2196f3, #64b5f6); /* Blue gradient */
+  color: #ffffff;
+  border: none;
+  padding: 0.9rem 1.3rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background 0.4s ease, transform 0.3s ease;
+  font-size: 1em;
+  margin-top: auto;
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.2); /* Blue shadow */
+  position: relative;
+  overflow: hidden;
+}
+
+.add-to-cart-btn-ita:hover {
+  background: linear-gradient(90deg, #64b5f6, #2196f3);
+  transform: scale(1.05);
+}
+
+.italian-pagination {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.italian-pagination button {
+  padding: 10px 18px;
+  border: 1px solid #2196f3; /* Blue border */
+  background: #ffffff;
+  color: #2196f3; /* Blue text */
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  font-size: 1em;
+}
+
+.italian-pagination button.active {
+  background: #2196f3; /* Blue active button */
+  color: #ffffff;
+  border-color: #1976d2;
+  cursor: default;
+  box-shadow: 0 0 10px rgba(33, 150, 243, 0.5); /* Blue shadow */
+  pointer-events: none;
+}
+
+.italian-pagination button:hover:not(.active) {
+  background: #2196f3; /* Blue hover */
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInTitle {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .italian-page-container {
+    padding: 40px 20px;
+    gap: 20px;
+  }
+  .italian-filter-section {
+    width: 100%;
+    position: relative;
+    max-height: none;
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+  .product-grid-ita {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-card-ita {
+    width: 100%;
+    max-width: 300px;
+  }
+  .add-to-cart-btn-ita {
+    font-size: 0.95em;
+    padding: 0.8rem 1.2rem;
+  }
+}

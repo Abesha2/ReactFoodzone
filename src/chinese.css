@@ -1,0 +1,318 @@
+/* You can customize these colors. I've tried to keep them consistent. */
+body {
+  margin: 0;
+  overflow: scroll;
+  background-color: rgb(5, 6, 8) !important;
+}
+
+.chinese-page-container-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background-color: #000046;
+}
+
+.gradient-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #000046, #000066, #00008b, #0000cd);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.chinese-page-container {
+  padding: 60px;
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 25px;
+  align-items: flex-start;
+ background: #e0f7fa;
+  color: #333;
+  animation: fadeIn 0.6s ease-out;
+  min-height: calc(100vh - 120px);
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.chinese-filter-section {
+  width: 400px;
+  max-width: 400px;
+  padding: 20px;
+background: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 20px;
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
+
+}
+
+.filter-heading {
+  font-size: 1.4em;
+  margin-bottom: 15px;
+  color: #00008b;
+  text-align: left;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.checkbox-container-chi {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  align-items: flex-start;
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.checkbox-container-chi label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9em;
+  color: #4b5563;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-container-chi input[type="checkbox"] {
+  margin-right: 8px;
+  cursor: pointer;
+  accent-color: #2196f3;
+}
+
+.checkbox-container-chi button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #2196f3, #64b5f6);
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 0.9em;
+  width: 100%;
+  transition: background 0.4s ease, transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.checkbox-container-chi button:hover {
+  background: linear-gradient(90deg, #64b5f6, #2196f3);
+  transform: scale(1.05);
+}
+
+.chinese-products-section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chinese-main-title h1 {
+  padding-top: 20px;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2em;
+  color: #00008b;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(33, 150, 243, 0.4);
+  animation: slideInTitle 0.6s ease-out;
+}
+
+.product-grid-chi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.product-card-chi {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  padding: 1.2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background: #f5f5dc;
+}
+
+.product-card-chi:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(33, 150, 243, 0.3);
+  border: 2px solid #2196f3;
+}
+
+.product-card-chi img {
+  width: 100%;
+  height: 160px !important;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  transition: transform 0.4s ease;
+}
+
+.product-card-chi img:hover {
+  transform: scale(1.1);
+}
+
+.product-card-chi h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.25em;
+  font-weight: 600;
+  color: #00008b;
+}
+
+.product-card-chi p {
+  margin-bottom: 1.5rem;
+  color: #4b5563;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.product-card-chi .product-price {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #1976d2;
+  margin-bottom: 15px;
+}
+
+.add-to-cart-btn-chi {
+  background: linear-gradient(90deg, #2196f3, #64b5f6);
+  color: #ffffff;
+  border: none;
+  padding: 0.9rem 1.3rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background 0.4s ease, transform 0.3s ease;
+  font-size: 1em;
+  margin-top: auto;
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.add-to-cart-btn-chi:hover {
+  background: linear-gradient(90deg, #64b5f6, #2196f3);
+  transform: scale(1.05);
+}
+
+.chinese-pagination {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.chinese-pagination button {
+  padding: 10px 18px;
+  border: 1px solid #2196f3;
+  background: #ffffff;
+  color: #2196f3;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  font-size: 1em;
+}
+
+.chinese-pagination button.active {
+  background: #2196f3;
+  color: #ffffff;
+  border-color: #2196f3;
+  cursor: default;
+  box-shadow: 0 0 10px rgba(33, 150, 243, 0.5);
+  pointer-events: none;
+}
+
+.chinese-pagination button:hover:not(.active) {
+  background: #2196f3;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInTitle {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .chinese-page-container {
+    padding: 40px 20px;
+    gap: 20px;
+  }
+  .chinese-filter-section {
+    width: 100%;
+    position: relative;
+    max-height: none;
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+  .product-grid-chi {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-card-chi {
+    width: 100%;
+    max-width: 300px;
+  }
+  .add-to-cart-btn-chi {
+    font-size: 0.95em;
+    padding: 0.8rem 1.2rem;
+  }
+}
