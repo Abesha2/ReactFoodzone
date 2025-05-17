@@ -13,11 +13,11 @@ const categories = [
 ];
 
 const dishes = [
-  { name: 'Spicy Chicken Biryani', img: 'https://images.unsplash.com/photo-1512058564366-c9dcd1afbbef?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60' },
-  { name: 'Italian Pasta', img: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60' ,route:'/italian'},
-  { name: 'Chinese Dumplings', img: 'https://images.unsplash.com/photo-1600891964887-2c8bccf13a1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60' },
+  { name: 'Spicy Chicken Biryani', img: '/images/chicken-biryani.jpg' },
+  { name: 'Italian Pasta', img: '/images/lasagna.jpg' ,route:'/italian'},
+  { name: 'Chinese Dumplings', img: '/images/dim-sum.jpg' },
   { name: 'Double Cheeseburger', img: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60' },
-  { name: 'Pepperoni Pizza', img: 'https://images.unsplash.com/photo-1601924582973-24b399ba35a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60' },
+  { name: 'BBQ Chicken Pizza', img: '/images/bbq-chicken.jpg' },
 ];
 
 const Home = () => {

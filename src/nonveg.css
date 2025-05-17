@@ -4,6 +4,7 @@ body {
   margin: 0;
   overflow: scroll;
   background-color: rgb(5, 6, 8) !important;
+  padding-top:100px ;
 }
 
 .nonveg-page-container-wrapper {
@@ -39,7 +40,7 @@ body {
 }
 
 .nonveg-page-container {
-  padding: 60px;
+  padding: 10px;
   display: flex;
   max-width: 1400px;
   margin: 0 auto;

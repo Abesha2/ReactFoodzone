@@ -75,7 +75,7 @@ body {
 }
 
 .bottom-nav a:hover {
-  color: #81d4fa; /* Light blue */
+  color: #ebe4e4; /* Light blue */
 }
 
 .bottom-nav a::after {
@@ -118,7 +118,7 @@ body {
 }
 
 .sign-in-link:hover {
-  color: #81d4fa; /* Light blue */
+  color: #dfe5e8; /* Light blue */
 }
 
 .sign-in-icon {

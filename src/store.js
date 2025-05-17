@@ -1,10 +1,9 @@
-import { configureStore, createSlice } from "@reduxjs/toolkit";
+import { configureStore, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 
 
 const savedCart=localStorage.getItem('cart');
 const localStorageCart=savedCart?JSON.parse(savedCart):[];
-
 
 
     const productSlice = createSlice({
@@ -139,11 +138,12 @@ pizza: [
   { name: 'Tortellini', price: 290, images: '/images/tortellini.jpg', description: 'Stuffed pasta with cheese or meat filling, served in broth or sauce.' }
 ],
 
-
     },
 
     reducers: {},
+   
 });
+
 
 const cartSlice=createSlice({ 
     name:'cart',

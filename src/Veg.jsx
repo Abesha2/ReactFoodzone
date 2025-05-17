@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { AddToCart } from './store'; // Corrected import path
 import './veg.css'; // Assuming this CSS file is in the same directory
@@ -13,12 +13,13 @@ const priceRanges = [
 
 function Veg() {
     const dispatch = useDispatch();
-    const vegProducts = useSelector((state) => state.products.veg || []); // Access veg products correctly
-
+    const vegProducts = useSelector((state) => state.products.veg); // Access veg products 
+    const loading = useSelector((state) => state.products.loading);
+    const error = useSelector((state) => state.products.error);
     const [currentPage, setCurrentPage] = useState(1);
     const [selectedRanges, setSelectedRanges] = useState([]);
-
     const itemsPerPage = 6;
+
 
     const handleCheckboxChange = (value) => {
         setSelectedRanges((prev) =>
@@ -54,6 +55,23 @@ function Veg() {
             setCurrentPage(pageNumber);
         }
     };
+
+    if (loading === 'pending') {
+        return (
+            <div className="veg-page-container">
+                <h1 className="veg-main-title">Loading products please wait mohen with deep sleep...</h1>
+            </div>
+        );
+    }
+
+    if (error) {
+        return (
+            <div className="veg-page-container">
+                <h1 className="veg-main-title">Error loading products : {error}</h1>
+            </div>
+        );
+    }
+
 
     return (
         <div className="veg-page-container-wrapper">

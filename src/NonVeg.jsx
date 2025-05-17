@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-
+import { useDispatch, useSelector } from 'react-redux';
 import { AddToCart } from './store';
 import './nonveg.css';
-import { useDispatch, useSelector } from 'react-redux';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const priceRanges = [
     { value: 'Rs 1 to Rs 50', min: 1, max: 50 },
@@ -52,8 +53,19 @@ function NonVeg() {
         }
     };
 
+    const handleAddToCart = (product) => {
+        dispatch(AddToCart(product));
+        toast.success(`${product.name} added to cart! 🛒`, {
+            position: 'top-right',
+            autoClose: 2000,
+        });
+    };
+
     return (
         <div className="nonveg-page-container">
+            {/* Toast Component */}
+            <ToastContainer position="bottom-center" autoClose={2000} />
+
             <div className="nonveg-filter-section">
                 <h2 className="filter-heading">Filter by Price</h2>
                 <div className="checkbox-container-non">
@@ -83,7 +95,7 @@ function NonVeg() {
                                 <p className="product-price">₹{product.price.toFixed(2)}</p>
                                 <button
                                     className="add-to-cart-btn-non"
-                                    onClick={() => dispatch(AddToCart(product))}
+                                    onClick={() => handleAddToCart(product)}
                                 >
                                     Add to Cart 🛒
                                 </button>
